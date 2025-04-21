@@ -15,6 +15,7 @@ pipeline {
         stage('Deploy') { 
             steps {
                  echo "Deploy"
+		    sh "sshpass -p "2402" scp -r ./ codeangel@192.168.1.13:~/Dev/test-site"
             }
         }
     }
