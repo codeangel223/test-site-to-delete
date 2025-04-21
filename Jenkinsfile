@@ -5,6 +5,9 @@ pipeline {
         stage('Build') { 
             steps {
                 echo "Build"
+                bat """
+
+                """
             }
         }
         stage('Test') { 
@@ -15,7 +18,7 @@ pipeline {
         stage('Deploy') { 
             steps {
                 echo "Deploy";
-		        bat "scp -r ./ codeangel@192.168.1.13:~/Dev/test-site"
+		        bat "scp -r index.html codeangel@192.168.1.13:~/Dev/test-site"
             }
         }
     }
