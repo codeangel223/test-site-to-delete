@@ -5,9 +5,6 @@ pipeline {
         stage('Build') { 
             steps {
                 echo "Build"
-                bat """
-
-                """
             }
         }
         stage('Test') { 
