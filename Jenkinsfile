@@ -15,7 +15,8 @@ pipeline {
         stage('Deploy') { 
             steps {
                 echo "Deploy";
-		        bat "scp -o StrictHostKeyChecking=no -r ./ codeangel@192.168.1.13:~/Dev/test-site"
+                bat "bash echo 'hello bash'"
+		        // bat "scp -o StrictHostKeyChecking=no -r ./ codeangel@192.168.1.13:~/Dev/test-site"
             }
         }
     }
